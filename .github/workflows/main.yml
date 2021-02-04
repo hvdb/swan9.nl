@@ -16,7 +16,7 @@ jobs:
       - uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete --exclude="" --include="" --filter=""
-          path: /github/workspace/build
+          path: /build
           remote_path: /home/henk/public_html
           remote_host: swan9.nl
           remote_port: 7685
