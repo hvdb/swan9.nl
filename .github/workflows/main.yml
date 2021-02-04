@@ -17,7 +17,7 @@ jobs:
         with:
           switches: -avzr --delete --exclude="" --include="" --filter=""
           path: /build
-          remote_path: /home/henk/public_html
+          remote_path: /home/henk/public_html/
           remote_host: swan9.nl
           remote_port: 7685
           remote_user: henk
