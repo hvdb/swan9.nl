@@ -13,3 +13,12 @@ jobs:
       - uses: helaili/jekyll-action@2.0.5
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+      - uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avzr --delete --exclude="" --include="" --filter=""
+          path: /
+          remote_path: /home/henk/public_html
+          remote_host: swan9.nl
+          remote_port: 7685
+          remote_user: henk
+          remote_key: ${{ secrets.DEPLOY_KEY }}
